@@ -1,0 +1,24 @@
+{
+  "name": "mathematical-web-service",
+  "version": "0.1.0",
+  "description": "A REST API that calculates mathematical functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvinovieira/mathematical-web-service.git"
+  },
+  "keywords": [],
+  "author": "Silvino Vieira",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/silvinovieira/mathematical-web-service/issues"
+  },
+  "homepage": "https://github.com/silvinovieira/mathematical-web-service#readme",
+  "devDependencies": {
+    "serverless-python-requirements": "^5.1.1",
+    "serverless-wsgi": "^1.7.7"
+  }
+}
