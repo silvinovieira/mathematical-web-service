@@ -1,16 +1,13 @@
-from flask_restful import Resource
-from flask_restful.reqparse import RequestParser
+from resources._base import BaseMathResource
 
 
-class Ackermann(Resource):
+class Ackermann(BaseMathResource):
     def __init__(self):
-        self.__request_parser = RequestParser()
-        self.__request_parser.add_argument('m', type=int, required=True, help='required as non-negative integer')
-        self.__request_parser.add_argument('n', type=int, required=True, help='required as non-negative integer')
         super(Ackermann, self).__init__()
+        self._request_parser.add_argument('m', type=int, required=True, help='required as non-negative integer')
 
     def get(self):
-        args = self.__request_parser.parse_args()
+        args = self._request_parser.parse_args()
         return self.calculate(args['m'], args['n'])
 
     @staticmethod

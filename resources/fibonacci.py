@@ -1,17 +1,13 @@
-from flask_restful import Resource
-from flask_restful.reqparse import RequestParser
+from resources._base import BaseMathResource
 
 
-class Fibonacci(Resource):
+class Fibonacci(BaseMathResource):
     def __init__(self):
-        self.__request_parser = RequestParser()
-        self.__request_parser.add_argument('n', type=int, required=True, help='required as non-negative integer')
         super(Fibonacci, self).__init__()
 
     def get(self):
-        args = self.__request_parser.parse_args()
-        n = args['n']
-        return self.calculate(n)
+        args = self._request_parser.parse_args()
+        return self.calculate(args['n'])
 
     @staticmethod
     def calculate(n):
