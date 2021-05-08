@@ -6,10 +6,6 @@ class Ackermann(BaseMathResource):
         super(Ackermann, self).__init__()
         self._request_parser.add_argument('m', type=int, required=True, help='required as non-negative integer')
 
-    def get(self):
-        args = self._request_parser.parse_args()
-        return self.calculate(args['m'], args['n'])
-
     @staticmethod
     def calculate(m, n):
         stack = []

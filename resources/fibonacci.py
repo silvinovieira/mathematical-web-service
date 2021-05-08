@@ -5,10 +5,6 @@ class Fibonacci(BaseMathResource):
     def __init__(self):
         super(Fibonacci, self).__init__()
 
-    def get(self):
-        args = self._request_parser.parse_args()
-        return self.calculate(args['n'])
-
     @staticmethod
     def calculate(n):
         if n in (0, 1):

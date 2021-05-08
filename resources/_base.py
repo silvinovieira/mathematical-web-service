@@ -10,6 +10,10 @@ class BaseMathResource(Resource):
         self._request_parser.add_argument('n', type=int, required=True, help='required as non-negative integer')
         super(BaseMathResource, self).__init__()
 
+    def get(self):
+        query_args = self._request_parser.parse_args()
+        return self.calculate(**query_args)
+
     @abstractmethod
-    def calculate(self, *args):
+    def calculate(self, **kwargs):
         pass
