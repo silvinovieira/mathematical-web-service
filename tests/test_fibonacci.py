@@ -8,7 +8,7 @@ class TestFibonacci:
     def test_client(self):
         return app.test_client()
 
-    def test_get_when_n_is_positive_int_return_ok(self, test_client):
+    def test_get_when_n_is_non_negative_int_return_ok(self, test_client):
         response = test_client.get('/api/fibonacci?n=2')
         assert response.status_code == 200
 

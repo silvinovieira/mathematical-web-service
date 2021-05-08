@@ -5,12 +5,7 @@ from flask_restful.reqparse import RequestParser
 class Fibonacci(Resource):
     def __init__(self):
         self.__request_parser = RequestParser()
-        self.__request_parser.add_argument(
-            'n',
-            type=int,
-            required=True,
-            help='The nth Fibonacci number is required as an integer',
-        )
+        self.__request_parser.add_argument('n', type=int, required=True, help='required as non-negative integer')
         super(Fibonacci, self).__init__()
 
     def get(self):
