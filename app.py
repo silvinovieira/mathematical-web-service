@@ -1,8 +1,14 @@
 from flask import Flask
+from flask_restful import Resource, Api
 
 app = Flask(__name__)
+api = Api(app)
 
 
-@app.route("/")
-def hello():
-    return "Hello Mathematical API!"
+class Hello(Resource):
+    @staticmethod
+    def get():
+        return "Hello Mathematical API!"
+
+
+api.add_resource(Hello, '/')
