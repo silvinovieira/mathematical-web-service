@@ -41,6 +41,18 @@ class TestAckermann:
         res = Ackermann.calculate(1, 0)
         assert res == 2
 
+    def test_calculate_ackermann_2_4(self):
+        res = Ackermann.calculate(2, 4)
+        assert res == 11
+
     def test_calculate_ackermann_3_4(self):
         res = Ackermann.calculate(3, 4)
         assert res == 125
+
+    def test_calculate_ackermann_4_1(self):
+        res = Ackermann.calculate(4, 1)
+        assert res == 65533
+
+    def test_calculate_ackermann_5_0(self):
+        res = Ackermann.calculate(5, 0)
+        assert res == 65533
