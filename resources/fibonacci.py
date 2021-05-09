@@ -1,4 +1,4 @@
-from resources._base import BaseMathResource
+from resources._base import BaseMathResource, logger
 
 
 class Fibonacci(BaseMathResource):
@@ -9,6 +9,8 @@ class Fibonacci(BaseMathResource):
     def calculate(n):
         if n < 0:
             raise ValueError('n must be a non-negative integer')
+
+        logger.info(f'Calculating Fibonacci for n={n}')
 
         if n in (0, 1):
             fibonacci = n

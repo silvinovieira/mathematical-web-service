@@ -1,7 +1,11 @@
 from abc import abstractmethod
 
+from flask import Flask
 from flask_restful import Resource
 from flask_restful.reqparse import RequestParser
+
+app = Flask(__name__)
+logger = app.logger
 
 
 class BaseMathResource(Resource):

@@ -1,6 +1,6 @@
 from collections import deque
 
-from resources._base import BaseMathResource
+from resources._base import BaseMathResource, logger
 
 
 class Ackermann(BaseMathResource):
@@ -12,6 +12,8 @@ class Ackermann(BaseMathResource):
     def calculate(m, n):
         if m < 0 or n < 0:
             raise ValueError('m and n must be non-negative integers')
+
+        logger.info(f'Calculating the Ackermann for (m, n)=({m}, {n})')
 
         stack = deque([])
         stack.extend([m, n])
