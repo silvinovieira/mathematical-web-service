@@ -13,9 +13,10 @@ class BaseMathResource(Resource):
     def get(self):
         query_args = self._request_parser.parse_args()
         try:
-            return self.calculate(**query_args)
+            result = self.calculate(**query_args)
+            return {'result': result}
         except ValueError as err:
-            return str(err), 400
+            return {'message': str(err)}, 400
 
     @abstractmethod
     def calculate(self, **kwargs):
