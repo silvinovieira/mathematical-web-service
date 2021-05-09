@@ -8,6 +8,9 @@ class Ackermann(BaseMathResource):
 
     @staticmethod
     def calculate(m, n):
+        if m < 0 or n < 0:
+            raise ValueError('m and n must be non-negative integers')
+
         stack = []
         while True:
             if not m:
