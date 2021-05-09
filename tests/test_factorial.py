@@ -22,6 +22,10 @@ class TestFactorial:
         response = test_client.get('/api/factorial?n=-2')
         assert response.status_code == 400
 
+    def test_get_when_n_is_not_passed_return_bad_request(self, test_client):
+        response = test_client.get('/api/factorial')
+        assert response.status_code == 400
+
     def test_calculate_factorial_0(self):
         nth = Factorial.calculate(0)
         assert nth == 1

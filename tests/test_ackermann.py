@@ -29,6 +29,14 @@ class TestAckermann:
         response = test_client.get('/api/ackermann?m=3&n=-2')
         assert response.status_code == 400
 
+    def test_get_when_m_is_not_passed_return_bad_request(self, test_client):
+        response = test_client.get('/api/ackermann?n=2')
+        assert response.status_code == 400
+
+    def test_get_when_n_is_not_passed_return_bad_request(self, test_client):
+        response = test_client.get('/api/ackermann?m=3')
+        assert response.status_code == 400
+
     def test_calculate_ackermann_0_0(self):
         res = Ackermann.calculate(0, 0)
         assert res == 1

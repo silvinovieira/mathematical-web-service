@@ -21,6 +21,10 @@ class TestFibonacci:
         response = test_client.get('/api/fibonacci?n=-2')
         assert response.status_code == 400
 
+    def test_get_when_n_is_not_passed_return_bad_request(self, test_client):
+        response = test_client.get('/api/fibonacci')
+        assert response.status_code == 400
+
     def test_calculate_fib_0(self):
         nth = Fibonacci.calculate(0)
         assert nth == 0
