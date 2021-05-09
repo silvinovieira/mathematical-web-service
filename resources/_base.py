@@ -1,4 +1,5 @@
 from abc import abstractmethod
+import logging
 
 from flask import Flask
 from flask_restful import Resource
@@ -6,6 +7,7 @@ from flask_restful.reqparse import RequestParser
 
 app = Flask(__name__)
 logger = app.logger
+logger.setLevel(logging.INFO)
 
 
 class BaseMathResource(Resource):
