@@ -8,7 +8,7 @@ class Fibonacci(BaseMathResource):
     @staticmethod
     def calculate(n):
         if n in (0, 1):
-            fibonacci = 1
+            fibonacci = n
         else:
             latest_numbers = (0, 1)
             for _ in range(n - 1):
