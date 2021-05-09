@@ -32,3 +32,7 @@ class TestFibonacci:
     def test_calculate_fib_40(self):
         nth = Fibonacci.calculate(40)
         assert nth == 102334155
+
+    def test_calculate_fib_400(self):
+        nth = Fibonacci.calculate(400)
+        assert nth == 176023680645013966468226945392411250770384383304492191886725992896575345044216019675
