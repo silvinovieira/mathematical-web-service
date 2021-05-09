@@ -22,7 +22,9 @@ functions:
   app:
     handler: wsgi_handler.handler
     events:
-      - http: GET /
+      - http: GET /api/ackermann
+      - http: GET /api/factorial
+      - http: GET /api/fibonacci
       - http: 'GET /{proxy+}'
 
 configValidationMode: error
