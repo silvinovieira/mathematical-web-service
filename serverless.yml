@@ -22,8 +22,7 @@ functions:
   app:
     handler: wsgi_handler.handler
     events:
-      - http:
-          path: /
-          method: get
+      - http: GET /
+      - http: 'GET /{proxy+}'
 
 configValidationMode: error
