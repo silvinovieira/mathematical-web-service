@@ -13,7 +13,7 @@ class Ackermann(BaseMathResource):
         if m < 0 or n < 0:
             raise ValueError('m and n must be non-negative integers')
 
-        logger.info(f'Calculating the Ackermann for (m, n)=({m}, {n})')
+        logger.info(f'Calculating the Ackermann function for (m, n)=({m}, {n})')
 
         stack = deque([])
         stack.extend([m, n])

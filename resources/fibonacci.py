@@ -7,7 +7,7 @@ class Fibonacci(BaseMathResource):
         if n < 0:
             raise ValueError('n must be a non-negative integer')
 
-        logger.info(f'Calculating Fibonacci for n={n}')
+        logger.info(f'Calculating the Fibonacci function for n={n}')
 
         if n in (0, 1):
             fibonacci = n
