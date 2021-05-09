@@ -25,6 +25,30 @@ To run the app:
 flask run
 ```
 
+### Endpoints
+
+The Ackermann endpoint requires two parameters:
+```
+/api/ackermann?m=1&n=2
+```
+
+The factorial endpoint requires one parameter:
+```
+/api/factorial?n=3
+```
+
+The Fibonacci endpoint requires one parameter:
+```
+/api/fibonacci?n=5
+```
+
+All parameters are non-negative integers.
+
+The expected response is an object with the attribute `result`:
+```json
+{"result": 7}
+```
+
 ## Run tests
 
 ---
