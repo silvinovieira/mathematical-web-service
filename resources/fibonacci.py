@@ -17,7 +17,7 @@ class Fibonacci(BaseMathResource):
         else:
             latest_numbers = (0, 1)
             for _ in range(n - 1):
-                nth = sum(latest_numbers)
-                latest_numbers = (latest_numbers[-1], nth)
+                latest_number = sum(latest_numbers)
+                latest_numbers = (latest_numbers[-1], latest_number)
             fibonacci = latest_numbers[-1]
         return fibonacci
