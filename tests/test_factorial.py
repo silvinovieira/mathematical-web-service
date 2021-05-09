@@ -1,3 +1,4 @@
+from decimal import Decimal
 import pytest
 
 from app import app
@@ -32,3 +33,7 @@ class TestFactorial:
     def test_calculate_factorial_10(self):
         nth = Factorial.calculate(10)
         assert nth == 3628800
+
+    def test_calculate_factorial_100(self):
+        nth = Factorial.calculate(100)
+        assert nth == pytest.approx(9.332621544 * (10 ** 157))
