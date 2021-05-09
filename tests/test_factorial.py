@@ -1,6 +1,7 @@
 import pytest
 
 from app import app
+from resources import Factorial
 
 
 class TestFactorial:
@@ -19,3 +20,15 @@ class TestFactorial:
     def test_get_when_n_is_negative_int_return_bad_request(self, test_client):
         response = test_client.get('/api/factorial?n=-2')
         assert response.status_code == 400
+
+    def test_calculate_factorial_0(self):
+        nth = Factorial.calculate(0)
+        assert nth == 1
+
+    def test_calculate_factorial_1(self):
+        nth = Factorial.calculate(1)
+        assert nth == 1
+
+    def test_calculate_factorial_10(self):
+        nth = Factorial.calculate(10)
+        assert nth == 3628800
