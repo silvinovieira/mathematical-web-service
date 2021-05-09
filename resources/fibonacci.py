@@ -2,9 +2,6 @@ from resources._base import BaseMathResource, logger
 
 
 class Fibonacci(BaseMathResource):
-    def __init__(self):
-        super(Fibonacci, self).__init__()
-
     @staticmethod
     def calculate(n):
         if n < 0:

@@ -2,9 +2,6 @@ from resources._base import BaseMathResource, logger
 
 
 class Factorial(BaseMathResource):
-    def __init__(self):
-        super(Factorial, self).__init__()
-
     @staticmethod
     def calculate(n):
         if n < 0:
