@@ -1,3 +1,4 @@
+import time
 from resources._base import BaseMathResource, logger
 
 
@@ -5,7 +6,7 @@ class Fibonacci(BaseMathResource):
     @staticmethod
     def calculate(n):
         if n < 0:
-            raise ValueError('[FIBONACCI-ERROR] n must be a non-negative integer')
+            raise ValueError('n must be a non-negative integer')
 
         logger.info(f'Calculating the Fibonacci function for n={n}')
 

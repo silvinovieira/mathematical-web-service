@@ -5,7 +5,7 @@ class Factorial(BaseMathResource):
     @staticmethod
     def calculate(n):
         if n < 0:
-            raise ValueError('[FACTORIAL-ERROR] n must be a non-negative integer')
+            raise ValueError('n must be a non-negative integer')
 
         logger.info(f'Calculating the factorial function for n={n}')
 

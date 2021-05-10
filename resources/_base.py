@@ -20,7 +20,7 @@ class BaseMathResource(Resource):
             result = self.calculate(**query_args)
             return {'result': result}
         except ValueError as err:
-            logger.error(err)
+            logger.error(f'[{self.__class__.__name__.upper()}-ERROR] {err}')
             return {'message': str(err)}, 400
 
     @abstractmethod
