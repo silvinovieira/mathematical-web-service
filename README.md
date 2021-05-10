@@ -76,7 +76,7 @@ npm install
 ```
 
 ### Local tests
-It is possible to emulate AWS Lambda and API Gateway on the local machine:
+AWS Lambda and API Gateway can be emulated on the local machine:
 ```bash
 sls wsgi serve
 ```
