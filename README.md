@@ -4,8 +4,6 @@ A REST API that calculates mathematical functions.
 
 ## Install
 
----
-
 It is recommended to create a virtual environment:
 ```bash
 python3 -m venv .venv
@@ -19,7 +17,6 @@ pip install -r requirements.txt
 
 ## Usage
 
----
 To run the app:
 ```bash
 flask run
@@ -51,7 +48,6 @@ The expected response is an object with the attribute `result`:
 
 ## Monitoring
 
----
 Local monitoring can be done with the application log. It is also saved to a file.
 
 A summary report is available running: 
@@ -61,15 +57,12 @@ python resources/reports.py
 
 ## Run tests
 
----
 To run the tests:
 ```bash
 pytest
 ```
 
 ## Deploy
-
----
 
 ### Prerequisites
 
