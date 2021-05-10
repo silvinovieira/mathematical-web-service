@@ -70,7 +70,7 @@ pytest
 - [Serverless Framework](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
 - Configure [AWS credentials](https://www.serverless.com/framework/docs/providers/aws/guide/credentials/)
 
-### Install
+### Install dependencies
 ```bash
 npm install
 ```
