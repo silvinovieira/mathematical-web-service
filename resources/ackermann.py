@@ -11,7 +11,7 @@ class Ackermann(BaseMathResource):
     @staticmethod
     def calculate(m, n):
         if m < 0 or n < 0:
-            raise ValueError('m and n must be non-negative integers')
+            raise ValueError('[ACKERMANN-ERROR] m and n must be non-negative integers')
 
         logger.info(f'Calculating the Ackermann function for (m, n)=({m}, {n})')
 

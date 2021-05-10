@@ -8,7 +8,8 @@ from resources import Ackermann, Factorial, Fibonacci
 app = Flask(__name__)
 api = Api(app, prefix='/api')
 
-logging.basicConfig(filename='math-web-service.log', level=logging.INFO)
+LOG_FILE = 'math-web-service.log'
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO)
 
 api.add_resource(Ackermann, '/ackermann')
 api.add_resource(Factorial, '/factorial')
