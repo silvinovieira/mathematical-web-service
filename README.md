@@ -49,6 +49,16 @@ The expected response is an object with the attribute `result`:
 {"result": 7}
 ```
 
+## Monitoring
+
+---
+Local monitoring can be done with the application log. It is also saved to a file.
+
+A summary report is available running: 
+```bash
+python resources/reports.py
+```
+
 ## Run tests
 
 ---
