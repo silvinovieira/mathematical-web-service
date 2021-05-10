@@ -55,6 +55,13 @@ A summary report is available running:
 python resources/reports.py
 ```
 
+There are more logs in debug level.
+
+One way to see them is to run the application with the development environment:
+```bash
+FLASK_ENV=development flask run
+```
+
 ## Run tests
 
 To run the tests:
