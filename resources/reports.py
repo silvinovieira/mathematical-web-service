@@ -1,8 +1,8 @@
-from app import LOG_FILE
+LOG_FILE = 'math-web-service.log'
 
 
 def generate_report():
-    with open(f'../{LOG_FILE}', 'r') as log_file:
+    with open(f'{LOG_FILE}', 'r') as log_file:
         log_data = log_file.read()
         calls = log_data.count('ARGS')
         errors = log_data.count('ERROR')

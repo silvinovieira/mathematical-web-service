@@ -4,11 +4,11 @@ from flask import Flask
 from flask_restful import Api
 
 from resources import Ackermann, Factorial, Fibonacci
+from resources.reports import LOG_FILE
 
 app = Flask(__name__)
 api = Api(app, prefix='/api')
 
-LOG_FILE = 'math-web-service.log'
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO)
 
 api.add_resource(Ackermann, '/ackermann')
