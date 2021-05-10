@@ -1,5 +1,4 @@
-import time
-from resources._base import BaseMathResource, logger
+from resources._base import BaseMathResource
 
 
 class Fibonacci(BaseMathResource):

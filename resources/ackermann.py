@@ -1,6 +1,6 @@
 from collections import deque
 
-from resources._base import BaseMathResource, logger
+from resources._base import BaseMathResource
 
 
 class Ackermann(BaseMathResource):

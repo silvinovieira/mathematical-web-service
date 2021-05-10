@@ -1,4 +1,4 @@
-from resources._base import BaseMathResource, logger
+from resources._base import BaseMathResource
 
 
 class Factorial(BaseMathResource):
