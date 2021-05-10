@@ -1,4 +1,4 @@
-from resources._base import BaseMathResource
+from resources._base import BaseMathResource, logger
 
 
 class Fibonacci(BaseMathResource):
@@ -11,8 +11,9 @@ class Fibonacci(BaseMathResource):
             fibonacci = n
         else:
             latest_numbers = (0, 1)
-            for _ in range(n - 1):
-                latest_number = sum(latest_numbers)
-                latest_numbers = (latest_numbers[-1], latest_number)
+            for i in range(2, n + 1):
+                fibonacci_i = sum(latest_numbers)
+                latest_numbers = (latest_numbers[-1], fibonacci_i)
+                logger.debug(f'fibonacci({i}) = {fibonacci_i}')
             fibonacci = latest_numbers[-1]
         return fibonacci
