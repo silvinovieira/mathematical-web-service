@@ -93,6 +93,9 @@ sls wsgi serve
 sls deploy
 ```
 
+### Monitoring
+The application logs are sent to CloudWatch. It is possible to create metrics and alerts.
+
 ### Cleanup
 ```bash
 sls remove
