@@ -14,6 +14,6 @@ class Fibonacci(BaseMathResource):
             for i in range(2, n + 1):
                 fibonacci_i = sum(latest_numbers)
                 latest_numbers = (latest_numbers[-1], fibonacci_i)
-                logger.debug(f'fibonacci({i}) = {fibonacci_i}')
+                logger.debug(f'Fibonacci({i}) = {fibonacci_i}')
             result = latest_numbers[-1]
         return result
