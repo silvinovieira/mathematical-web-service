@@ -1,6 +1,6 @@
 from collections import deque
 
-from resources._base import BaseMathResource
+from resources._base import BaseMathResource, logger
 
 
 class Ackermann(BaseMathResource):
@@ -31,5 +31,7 @@ class Ackermann(BaseMathResource):
                 stack.extend([m - 1, 1])
             else:
                 stack.extend([m - 1, m, n - 1])
+
+            logger.debug(f'Ackermann stack: {stack}')
 
         return stack[0]
