@@ -17,6 +17,7 @@ class BaseMathResource(Resource):
 
     def get(self):
         query_args = self._request_parser.parse_args()
+        logger.info(f'[{self._get_class_name()}-ARGS] {query_args}')
         start_time = time.time()
 
         try:

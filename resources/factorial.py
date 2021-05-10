@@ -7,8 +7,6 @@ class Factorial(BaseMathResource):
         if n < 0:
             raise ValueError('n must be a non-negative integer')
 
-        logger.info(f'Calculating the factorial function for n={n}')
-
         factorial = 1
         if n != 0:
             for i in range(1, n + 1):
