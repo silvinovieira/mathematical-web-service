@@ -1,4 +1,4 @@
-from resources._base import BaseMathResource
+from resources._base import BaseMathResource, logger
 
 
 class Factorial(BaseMathResource):
@@ -11,4 +11,5 @@ class Factorial(BaseMathResource):
         if n != 0:
             for i in range(1, n + 1):
                 factorial *= i
+                logger.debug(f'factorial({i}) = {factorial}')
         return factorial
