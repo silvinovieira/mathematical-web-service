@@ -10,6 +10,7 @@ app = Flask(__name__)
 api = Api(app, prefix='/api')
 
 if len(logging.getLogger().handlers) > 0:
+    # AWS Lambda Python runtime pre-configures a logging handler
     logging.getLogger().setLevel(logging.INFO)
 else:
     logging.basicConfig(filename=LOG_FILE, level=logging.INFO)
